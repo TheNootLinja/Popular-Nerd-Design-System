@@ -28,30 +28,58 @@
   <!-- Add your site or application content here -->
 
   <h1>Hello World</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus doloremque facere voluptatem? Provident accusantium laudantium quia accusamus asperiores vero voluptatem numquam, molestias magnam, architecto atque eaque distinctio in. Non provident eius atque quasi, porro maiores, veritatis aliquid pariatur, fugit nihil odit corporis dolorum quidem aliquam distinctio? Sapiente quod unde dolores.</p>
+  <p>
+    Lorem ipsum dolor sit amet, <a href="/">consectetur</a> adipisicing elit. Accusamus doloremque facere 
+    voluptatem? Provident accusantium laudantium quia accusamus asperiores vero voluptatem numquam,
+     molestias magnam, architecto atque eaque distinctio in. Non provident eius atque quasi, porro maiores,
+      veritatis aliquid pariatur, fugit nihil odit corporis dolorum quidem aliquam distinctio? Sapiente quod unde dolores.
+    </p>
   
   <h2>Hello World</h2>
-  <blockquote>Lorem ipsum dolor, sit amet <strong>consectetur</strong> adipisicing elit. Porro laborum vitae similique rem. Fugit magnam quos aliquid veniam harum asperiores eos voluptas ut a laudantium necessitatibus repellat doloribus ea nisi consectetur sunt ex soluta, itaque, commodi voluptatem ipsum accusantium? Voluptates, illum nobis! Rerum dicta culpa doloribus omnis? Reprehenderit, ipsam exercitationem.</blockquote>
+  <blockquote>
+    Lorem ipsum dolor, sit amet <strong>consectetur</strong> adipisicing elit. Porro laborum vitae 
+    similique rem. Fugit magnam quos aliquid veniam harum asperiores <a href="/">consectetur</a> eos voluptas ut a laudantium necessitatibus 
+    repellat doloribus ea nisi consectetur sunt ex soluta, itaque, commodi voluptatem ipsum accusantium? Voluptates, 
+    illum nobis! Rerum dicta culpa doloribus omnis? Reprehenderit, ipsam exercitationem.
+  </blockquote>
   
   <h3>Hello World</h3>
-  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates minus quia corporis adipisci tempora? Tempora, veniam recusandae reiciendis nulla natus minus id impedit quidem animi, amet numquam excepturi! Consectetur rerum hic architecto aliquam magni voluptatum tempore a repudiandae minus ut iusto blanditiis deleniti consequuntur ab, aliquid neque sapiente repellat reiciendis.</p>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates minus quia corporis adipisci tempora? 
+    Tempora, veniam recusandae reiciendis nulla natus minus id impedit quidem animi, amet numquam excepturi! 
+    Consectetur rerum hic architecto aliquam magni voluptatum tempore a repudiandae minus ut iusto blanditiis 
+    deleniti consequuntur ab, aliquid neque sapiente repellat reiciendis.
+  </p>
+  <h4>Hello World</h4>
+  <h5>Hello World</h5>
+  <h6>Hello World</h6>
+  <hr>
   <ul>
-    <hr>
-    <h4>Hello World</h4>
-    <h5>Hello World</h5>
-    <h6>Hello World</h6>
-    <hr>
     <li>Hi</li>
     <li>Hello</li>
     <li>It's me</li>
   </ul>
-
+<hr>
   <form action="">
-    <div><label for="text">Text</label><input id="text" type="text"></div>
-    <div><label for="number">Number</label><input id="text" type="text"></div>
-    <div><label for="">Text</label><input id="text" type="text"></div>
+    <div><label for="text">Text</label><input placeholder="Default Text" id="text" type="text"></div>
+    <div><label for="number">Number</label><input id="number" type="text"></div>
+    <div><label for="email">Email</label><input id="email" type="email"></div>
+    <div><label for="textarea">Textarea</label><textarea id="textarea">Default Value</textarea></div>
+    <div>
+      <label for="select">Select</label>
+      <select id="select" type="text">
+        <option value="one">One</option>
+        <option value="two">Two</option>
+      </select>
+    </div>
+    <button>Submit</button>
+    <button class="cancel">Cancel</button>
+    <button disabled>Disabled</button>
+    <button>Button with long text</button>
+    <button>Button &xrarr;</button>
   </form>
-
+  <br>
+  <button class="small">Button &xrarr;</button>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
