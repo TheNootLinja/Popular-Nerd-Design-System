@@ -22,6 +22,7 @@
   /* Type */
   --headingFont: "Space Mono", monospace;
   --bodyFont: "Work Sans", sans-serif;
+  --baseFontSize: 100%;
   --h1: 3.052rem;
   --h2: 2.441rem;
   --h3: 1.953rem;
@@ -37,19 +38,77 @@
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Positioning */
+  --containerPadding: 2.5%;
+  --headerHeight: 3rem;
 }
 
 /* From Type Scale */
 
 html {
-  font-size: 112.5%;
-} /*18px*/
+  font-size: var(--baseFontSize);
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body {
   font-family: var(--bodyFont);
   font-weight: 400;
   line-height: 1.75;
-  padding-bottom: 300px;
+  background: var(--background);
+  color: var(--textColor);
+}
+
+header {
+  --headerBackground: var(--darkBlue);
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: var(--headerHeight);
+  background-color: var(--headerBackground);
+  box-shadow: var(--level-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--containerPadding);
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  border-bottom: solid 2px var(--yellow);
+}
+
+footer {
+  --footerTextColor: var(--lightGrey);
+  color: var(--footerTextColor);
+  background: var(--black);
+  padding: 2rem var(--containerPadding);
+  text-align: center;
+}
+
+footer a {
+  color: var(--footerTextColor);
+}
+
+footer p {
+  margin-bottom: 0;
+  max-width: none;
+}
+
+/* The reason the below selector only adds padding to the second and
+third anchor tags is because it finds where there is an achor then
+one right next to it and adds the padding */
+header nav a + a {
+  margin-left: 10px;
 }
 
 p {
@@ -102,11 +161,6 @@ small,
 }
 
 /* End Type Scale */
-
-body {
-  background: var(--background);
-  color: var(--textColor);
-}
 
 .dark {
   --background: var(--black);
@@ -180,13 +234,12 @@ button.small {
 }
 
 .layout {
-  margin: 0 auto;
-  width: 95%;
+  padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
 }
 
 .grid {
   --gridCols: 2;
-  display: grid;
+  display: block;
   grid-template-columns: repeat(var(--gridCols), 1fr);
 }
 
@@ -200,10 +253,31 @@ button.small {
 
 .flex {
   --justifyContent: space-between;
-  display: flex;
+  display: block;
   justify-content: var(--justifyContent);
 }
 
 .flex-around {
   --justifyContent: space-around;
+}
+
+/* Phone <500 */
+@media only screen and (min-width: 500px) {
+  :root {
+    --baseFontSize: 112.5%;
+  }
+  .grid {
+    display: grid;
+  }
+  .flex {
+    display: flex;
+  }
+}
+
+/* Tablet 500-700 */
+
+.fake-logo {
+  font-size: var(--baseFontSize);
+  margin: 0;
+  padding-right: 6px;
 }
