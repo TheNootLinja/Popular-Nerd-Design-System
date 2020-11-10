@@ -24,7 +24,7 @@
 </head>
 
 <body>
-
+  <main class="layout">
   <!-- Add your site or application content here -->
 
   <h1>Hello World</h1>
@@ -50,20 +50,23 @@
     Consectetur rerum hic architecto aliquam magni voluptatum tempore a repudiandae minus ut iusto blanditiis 
     deleniti consequuntur ab, aliquid neque sapiente repellat reiciendis.
   </p>
-  <h4>Hello World</h4>
-  <h5>Hello World</h5>
-  <h6>Hello World</h6>
-  <hr>
-  <ul>
-    <li>Hi</li>
-    <li>Hello</li>
-    <li>It's me</li>
-  </ul>
+  <div class="grid">
+    <h4>Hello World</h4>
+    <h5>Hello World</h5>
+    <h6>Hello World</h6>
+    <ul>
+      <li>Hi</li>
+      <li>Hello</li>
+      <li>It's me</li>
+    </ul>
+  </div>
 <hr>
-  <form action="">
+  <form>
+    <div class="flex flex-around">
     <div><label for="text">Text</label><input placeholder="Default Text" id="text" type="text"></div>
     <div><label for="number">Number</label><input id="number" type="text"></div>
     <div><label for="email">Email</label><input id="email" type="email"></div>
+    </div>
     <div><label for="textarea">Textarea</label><textarea id="textarea">Default Value</textarea></div>
     <div>
       <label for="select">Select</label>
@@ -79,6 +82,7 @@
     <button>Button &xrarr;</button>
   </form>
   <br>
+</main>
   <button class="small">Button &xrarr;</button>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
