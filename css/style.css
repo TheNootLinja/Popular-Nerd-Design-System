@@ -8,6 +8,7 @@
   --darkBlue: #00214d;
   --grey: #bfbfbf;
   --lightGrey: #f2f4f6;
+  --white: #fff;
 
   /* Define the colors intentions */
   --primary: var(--green);
@@ -15,6 +16,7 @@
   --background: var(--lightGrey);
   --textColor: var(--black);
   --lineColor: var(--green);
+  --cardBg: var(--white);
 
   /* styles */
   --line: solid 1px var(--lineColor);
@@ -42,6 +44,9 @@
   /* Positioning */
   --containerPadding: 2.5%;
   --headerHeight: 3rem;
+
+  /* Misc */
+  --borderRadius: 10px;
 }
 
 /* From Type Scale */
@@ -170,7 +175,7 @@ small,
 blockquote {
   margin: 2px;
   padding: 2em;
-  background: white;
+  background: var(--cardBg);
   box-shadow: var(--level-3);
 }
 
@@ -280,4 +285,19 @@ button.small {
   font-size: var(--baseFontSize);
   margin: 0;
   padding-right: 6px;
+}
+
+.card {
+  padding: 2em;
+  background: var(--cardBg);
+  box-shadow: var(--level-3);
+  border-radius: var(--borderRadius);
+}
+
+.card > *:first-child {
+  margin-top: 0;
+}
+
+.card > *:last-child {
+  margin-bottom: 0;
 }
