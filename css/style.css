@@ -167,11 +167,6 @@ small,
 
 /* End Type Scale */
 
-.dark {
-  --background: var(--black);
-  --textColor: var(--lightGrey);
-}
-
 blockquote {
   margin: 2px;
   padding: 2em;
@@ -256,6 +251,12 @@ button.small {
   --gridCols: 4;
 }
 
+.split {
+  display: grid;
+  grid-template-columns: 33% 67%;
+  grid-gap: 20px;
+}
+
 .flex {
   --justifyContent: space-between;
   display: block;
@@ -300,4 +301,9 @@ button.small {
 
 .card > *:last-child {
   margin-bottom: 0;
+}
+
+.dark {
+  --background: var(--black);
+  --textColor: var(--lightGrey);
 }
